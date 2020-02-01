@@ -12,4 +12,9 @@ public class MovementComponent : MonoBehaviour
         MovementInput = Vector3.zero;
         return movementInput;
     }
+
+    public virtual void StopMovement()
+    {
+        
+    }
 }

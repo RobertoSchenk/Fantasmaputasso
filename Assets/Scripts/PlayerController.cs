@@ -5,13 +5,11 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public MovementComponent moveComponent;
-    // Start is called before the first frame update
     void Start()
     {
         moveComponent = GetComponent<MovementComponent>();
     }
 
-    // Update is called once per frame
     void Update()
     {
 

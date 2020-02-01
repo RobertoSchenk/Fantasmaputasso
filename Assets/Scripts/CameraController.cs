@@ -4,29 +4,34 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public Rigidbody rb;
     public int distance;
     public GameObject target;
     Vector3 targetpos;
     public float minDist, speed;
 
+    float offsetY;
     // Start is called before the first frame update
     void Start()
     {
-        
+        offsetY =  transform.position.y - target.transform.position.y;
+        targetpos = target.transform.position + new Vector3(0, offsetY, -distance);
+        transform.position = targetpos;
     }
 
     // Update is called once per frame
     void Update()
     {
+        targetpos = target.transform.position + new Vector3(0, offsetY, -distance);
 
-        targetpos = target.transform.position + new Vector3(0, 0, -distance);
-        if (Vector3.Distance(targetpos, transform.position) > 2)
+        if(Mathf.Abs(targetpos.x - transform.position.x) >= minDist)
         {
-            Vector3 direction = (targetpos - transform.position).normalized;
-            rb.MovePosition(transform.position + direction * 10 * Time.deltaTime);
+            targetpos += new Vector3(-minDist,0,0) * Mathf.Sign(targetpos.x  - transform.position.x);
+            transform.position = targetpos;
         }
-       
-
+        else
+        {
+            transform.position = Vector3.Lerp(transform.position, targetpos, Time.deltaTime * speed);
+        }
+  
     }
 }

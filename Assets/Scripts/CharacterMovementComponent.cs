@@ -5,9 +5,17 @@ using UnityEngine;
 public class CharacterMovementComponent : MovementComponent
 {
     public float Speed;
+
+    public CharacterController controller;
+
     // Update is called once per frame
+
     void Update()
     {
-        transform.position += MovementInput.normalized * Speed * Time.deltaTime;
+
+
+        controller.Move(MovementInput.normalized * Speed * Time.deltaTime);
+
     }
+
 }

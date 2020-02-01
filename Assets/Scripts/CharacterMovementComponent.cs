@@ -14,7 +14,7 @@ public class CharacterMovementComponent : MovementComponent
     {
 
 
-        controller.Move(MovementInput.normalized * Speed * Time.deltaTime);
+        controller.Move(ConsumeMovementInput().normalized * Speed * Time.deltaTime);
 
     }
 

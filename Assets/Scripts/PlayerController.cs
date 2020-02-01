@@ -12,11 +12,16 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        moveComponent.MovementInput = new Vector3(0,0,0);
 
-        if(Input.GetKey(KeyCode.W))
-        {
-            moveComponent.MovementInput = new Vector3(0,1,0);
-        }
+        float x = Input.GetAxis("Horizontal");
+        float z = Input.GetAxis("Vertical");
+
+        //moveComponent.MovementInput = new Vector3(0,0,0);
+
+        moveComponent.MovementInput = new Vector3(x, 0f, z);
+        //if(Input.GetKey(KeyCode.W))
+        //{
+        //    moveComponent.MovementInput = new Vector3(0,1,0);
+        //}
     }
 }

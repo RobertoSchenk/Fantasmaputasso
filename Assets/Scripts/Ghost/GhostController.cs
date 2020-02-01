@@ -10,11 +10,13 @@ public class GhostController : MonoBehaviour
     Collider col;
     GameObject targetObject;
     BreakableItem possessedItem;
-
     public string possessItemTag = "PossessItem";
 
     bool canPickupNewTarget = true;
-    GameObject[] waypoints;
+    public GameObject[] waypoints;
+
+    public float waitingTime = 3;
+    float _currentWait = 0;
 
     void Start()
     {
@@ -31,6 +33,10 @@ public class GhostController : MonoBehaviour
         {
             targetObject = possessables[Random.Range(0, possessables.Length)];
             ghostObject.layer = LayerMask.NameToLayer("GhostNoCol");
+        }
+        else
+        {
+            canPickupNewTarget = false;
         }
     }
 
@@ -67,6 +73,7 @@ public class GhostController : MonoBehaviour
         possessedItem = null;
         targetObject = null;
         moveComponent = ghostObject.GetComponent<MovementComponent>();
+        canPickupNewTarget = false;
 
         EnableCollisionAndRender(true);
     }
@@ -84,7 +91,11 @@ public class GhostController : MonoBehaviour
             return;
         }
 
-        moveComponent.MovementInput = targetObject.transform.position - transform.position;
+        if(Vector3.Distance(targetObject.transform.position, ghostObject.transform.position) >= 0.01f)
+        {
+            moveComponent.MovementInput = targetObject.transform.position - transform.position;
+        }
+
 
         if(targetObject.transform.position.sqrMagnitude - transform.position.sqrMagnitude <= 3f * 3f)
         {
@@ -104,10 +115,36 @@ public class GhostController : MonoBehaviour
 
     void Update()
     {
+        if(_currentWait > 0)
+        {
+            _currentWait = Mathf.Clamp(_currentWait - Time.deltaTime, 0.0f, 99999.0f);
+            return;
+        }
+
        if(possessedItem == null && !canPickupNewTarget)
        {
+           if(targetObject == null)
+           {
+               GameObject[] waypoints =FindWaypoints();
+               if(waypoints.Length > 0)
+               {
+                   targetObject = waypoints[Random.Range(0, waypoints.Length)];
+               }
+           }
+
+            if(Vector3.Distance(targetObject.transform.position, ghostObject.transform.position) >= 1)
+            {
+                moveComponent.MovementInput = DirectionToTargetObject();
+            }
+            else if(_currentWait == 0)
+            {
+                _currentWait = waitingTime;
+                targetObject = null;
+                canPickupNewTarget = true;
+            }
            return;
        }
+
        if(possessedItem == null )
        {
            ChasingPossessUpdate();

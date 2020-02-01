@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Floor
   - PossessItem
+  - Waypoint
   layers:
   - Default
   - TransparentFX

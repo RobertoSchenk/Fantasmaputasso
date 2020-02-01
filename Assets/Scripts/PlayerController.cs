@@ -23,5 +23,8 @@ public class PlayerController : MonoBehaviour
         //{
         //    moveComponent.MovementInput = new Vector3(0,1,0);
         //}
+
+        Shader.SetGlobalVector("_PlayerPos", transform.position);
+        Shader.SetGlobalVector("PlayerPos", transform.position);
     }
 }

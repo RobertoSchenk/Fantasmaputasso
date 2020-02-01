@@ -8,6 +8,7 @@ public class BreakableItem : MonoBehaviour
     public UnityEvent onBreak;
     public Vector3 startingForward;
     public Collider possessCollider;
+    public GameObject brokenVersion;
     public void Start()
     {
         startingForward = transform.forward;
@@ -26,6 +27,10 @@ public class BreakableItem : MonoBehaviour
         }
 
         onBreak.Invoke();
+
+        var go = GameObject.Instantiate(brokenVersion, transform.position, Quaternion.identity);
+        go.transform.rotation = transform.rotation;
+        Destroy(gameObject);
     }
 
     private void OnCollisionEnter(Collision other)

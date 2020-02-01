@@ -52,7 +52,7 @@ MonoBehaviour:
   dist: 5
   mod: 0.1
   rewindSpeed: 1
-  unrewindableDelay: 3
+  unrewindableDelay: 6
 --- !u!135 &175938636344138529
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -61,7 +61,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 879142116875016246}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 2

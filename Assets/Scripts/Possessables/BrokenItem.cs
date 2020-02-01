@@ -30,6 +30,8 @@ public class BrokenItem : MonoBehaviour
     float _currentUnRewindable;
     bool rewinded;
 
+    bool isPlayerInteracting;
+
 
     void Start()
     {
@@ -84,19 +86,31 @@ public class BrokenItem : MonoBehaviour
 
     void Update()
     {
-        if(!rewinded && !rewinded)
+        if(!rewinded && !isPlayerInteracting)
         {
             _currentUnRewindable += Time.deltaTime;
         }
 
-        if(Input.GetKeyDown(KeyCode.F1))
+        if(IsUnrewindable())
+        {
+            rewinding = false;
+        }
+
+        if(!rewinding && isPlayerInteracting)
         {
             StartRewind();
         }
 
         if(rewinding && _currentRewind < 1.0f)
         {
-            _currentRewind = Mathf.Clamp(_currentRewind + Time.deltaTime * rewindSpeed, 0, 1);
+            if(isPlayerInteracting)
+            {
+                _currentRewind = Mathf.Clamp(_currentRewind + Time.deltaTime * rewindSpeed, 0, 1);
+            }
+            else
+            {
+                _currentRewind = Mathf.Clamp(_currentRewind - Time.deltaTime * rewindSpeed, 0, 1);
+            }
             Rewind();
         }
         else if(rewinding)
@@ -107,17 +121,19 @@ public class BrokenItem : MonoBehaviour
     }
 
 
-    void OnTriggerExit(Collision other)
-    {
-
-        rewinding = false;
-    }
-
-    void OnTriggerEnter(Collision other)
+    void OnTriggerExit(Collider other)
     {
         if(other.gameObject.tag == "Player")
         {
-            rewinding  = true;
+            isPlayerInteracting = false;
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Player")
+        {
+            isPlayerInteracting  = true;
         }
     }
 }

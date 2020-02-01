@@ -13,6 +13,9 @@ public class GhostController : MonoBehaviour
 
     public string possessItemTag = "PossessItem";
 
+    bool canPickupNewTarget = true;
+    GameObject[] waypoints;
+
     void Start()
     {
         ghostObject = gameObject;
@@ -23,11 +26,22 @@ public class GhostController : MonoBehaviour
 
     void AssignNewTarget()
     {
-        GameObject[] possessables = GameObject.FindGameObjectsWithTag(possessItemTag);
+        GameObject[] possessables = FindPossessables();
         if(possessables.Length > 0)
         {
             targetObject = possessables[Random.Range(0, possessables.Length)];
+            ghostObject.layer = LayerMask.NameToLayer("GhostNoCol");
         }
+    }
+
+    GameObject[] FindPossessables()
+    {
+        return GameObject.FindGameObjectsWithTag(possessItemTag);
+    }
+
+    GameObject[] FindWaypoints()
+    {
+        return waypoints;
     }
 
     void Possess(GameObject otherObj)
@@ -62,7 +76,7 @@ public class GhostController : MonoBehaviour
         moveComponent.MovementInput = possessedItem.startingForward;
     }
 
-    void RegularUpdate()
+    void ChasingPossessUpdate()
     {
         if(targetObject == null)
         {
@@ -71,13 +85,32 @@ public class GhostController : MonoBehaviour
         }
 
         moveComponent.MovementInput = targetObject.transform.position - transform.position;
+
+        if(targetObject.transform.position.sqrMagnitude - transform.position.sqrMagnitude <= 3f * 3f)
+        {
+            ghostObject.layer = LayerMask.NameToLayer("Ghost");
+        }
+    }
+
+    Vector3 DirectionToTargetObject()
+    {
+        if(targetObject == null)
+        {
+            return Vector3.zero;
+        }
+
+        return (targetObject.transform.position - ghostObject.transform.position).normalized;
     }
 
     void Update()
     {
-       if(possessedItem == null)
+       if(possessedItem == null && !canPickupNewTarget)
        {
-           RegularUpdate();
+           return;
+       }
+       if(possessedItem == null )
+       {
+           ChasingPossessUpdate();
        }
        else
        {

@@ -14,12 +14,11 @@ public class ItemMovementComponent : MovementComponent
     public override void StopMovement()
     {
         MovementInput = Vector3.zero;
-        rb.velocity = Vector3.zero;
-        rb.angularVelocity = Vector3.zero;
+        rb.AddForce(new Vector3(0,-1,0) * speed, ForceMode.Force);
     }
 
     void Update()
     {
-        rb.AddForce(ConsumeMovementInput() * speed * Time.deltaTime, ForceMode.VelocityChange);
+        rb.AddForce(ConsumeMovementInput() * speed * Time.deltaTime, ForceMode.Force);
     }
 }

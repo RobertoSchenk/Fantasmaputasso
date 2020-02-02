@@ -23,11 +23,11 @@ public class Room : MonoBehaviour
     public GameObject camera;
     void Start()
     {
-       InvisWall.enabled = false;
         UpdateWallStatus(wallS);
        UpdateWallStatus(wallE);
        UpdateWallStatus(wallW);
        UpdateWallStatus(wallN);
+
     }
     
     void UpdateWallStatus(WallStruct wallStruct)

@@ -53,7 +53,47 @@ ModelImporter:
     4300010: Cheesecake.005
     4300012: Cheesecake.006
     4300014: Cheesecake.007
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pratos.008
+    second: {fileID: 2100000, guid: c8d4d5e89e64e554d8c6d8e4b4574f04, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pratos.009
+    second: {fileID: 2100000, guid: 245ed9d6b21686a4b8fdaaa680a150a8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pratos.010
+    second: {fileID: 2100000, guid: af8f4b9c664063f499fa3a34a74d1e77, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pratos.011
+    second: {fileID: 2100000, guid: 421a619f5a0d6d149a0c4d7f14b05885, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pratos.012
+    second: {fileID: 2100000, guid: 0bba9c0aaa304eb4ca95798b1b58958a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pratos.013
+    second: {fileID: 2100000, guid: 082b3f2e1c90e274e9ef77f69ff0fc40, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pratos.014
+    second: {fileID: 2100000, guid: 83ce69112fe04e449beefa7ee95d6e06, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pratos.015
+    second: {fileID: 2100000, guid: 119feeadea4a3d846baffd8af8fb215c, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

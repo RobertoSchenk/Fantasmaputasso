@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 298939524334072303}
+  - component: {fileID: 5776025425255970319}
+  - component: {fileID: 5719473212466027618}
   m_Layer: 0
   m_Name: Item_Broken_Quadro3
   m_TagString: Untagged
@@ -23,14 +25,46 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1465853044774118857}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 465.1566, y: 76.024, z: 74.343}
-  m_LocalScale: {x: 100, y: 100.00003, z: 100.00003}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6083216175028101450}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &5776025425255970319
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465853044774118857}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5719473212466027618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465853044774118857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84927b1d759286e41a7c78e46d3ac59e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  internalObjects: []
+  startingPositions: []
+  endedPositions: []
+  force: 250
+  dist: 1
+  mod: 0.1
+  rewindSpeed: 1
 --- !u!1 &1828664446087196320
 GameObject:
   m_ObjectHideFlags: 0
@@ -42,6 +76,8 @@ GameObject:
   - component: {fileID: 1828664446087492224}
   - component: {fileID: 1828664446086165152}
   - component: {fileID: 1828664446085197920}
+  - component: {fileID: 3577904241559294265}
+  - component: {fileID: 4305907055959200316}
   m_Layer: 0
   m_Name: Quadro3_cell.002
   m_TagString: Untagged
@@ -88,8 +124,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
-  - {fileID: 2100002, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
+  - {fileID: 2100000, guid: 821f90b7e99ffa14d9ccf1c9e34f9a97, type: 2}
+  - {fileID: 2100000, guid: 821f90b7e99ffa14d9ccf1c9e34f9a97, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -109,6 +145,36 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &3577904241559294265
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828664446087196320}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300004, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
+--- !u!54 &4305907055959200316
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828664446087196320}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1828664446087196322
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,6 +186,8 @@ GameObject:
   - component: {fileID: 1828664446087492226}
   - component: {fileID: 1828664446086165154}
   - component: {fileID: 1828664446085197922}
+  - component: {fileID: 295825048313987157}
+  - component: {fileID: 8447018638047156795}
   m_Layer: 0
   m_Name: Quadro3_cell.003
   m_TagString: Untagged
@@ -166,8 +234,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100002, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
-  - {fileID: 2100000, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
+  - {fileID: 2100000, guid: 821f90b7e99ffa14d9ccf1c9e34f9a97, type: 2}
+  - {fileID: 2100000, guid: 821f90b7e99ffa14d9ccf1c9e34f9a97, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -187,6 +255,36 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &295825048313987157
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828664446087196322}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300006, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
+--- !u!54 &8447018638047156795
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828664446087196322}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1828664446087196324
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,6 +296,8 @@ GameObject:
   - component: {fileID: 1828664446087492228}
   - component: {fileID: 1828664446086165156}
   - component: {fileID: 1828664446085197924}
+  - component: {fileID: 1131708578013207172}
+  - component: {fileID: 1070546620722207210}
   m_Layer: 0
   m_Name: Quadro3_cell
   m_TagString: Untagged
@@ -244,8 +344,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
-  - {fileID: 2100002, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
+  - {fileID: 2100000, guid: 821f90b7e99ffa14d9ccf1c9e34f9a97, type: 2}
+  - {fileID: 2100000, guid: 821f90b7e99ffa14d9ccf1c9e34f9a97, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -265,6 +365,36 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1131708578013207172
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828664446087196324}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
+--- !u!54 &1070546620722207210
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828664446087196324}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1828664446087196326
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,6 +406,8 @@ GameObject:
   - component: {fileID: 1828664446087492230}
   - component: {fileID: 1828664446086165158}
   - component: {fileID: 1828664446085197926}
+  - component: {fileID: 5730457778958296672}
+  - component: {fileID: 6956366619170650804}
   m_Layer: 0
   m_Name: Quadro3_cell.001
   m_TagString: Untagged
@@ -322,8 +454,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
-  - {fileID: 2100002, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
+  - {fileID: 2100000, guid: 821f90b7e99ffa14d9ccf1c9e34f9a97, type: 2}
+  - {fileID: 2100000, guid: 821f90b7e99ffa14d9ccf1c9e34f9a97, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -343,6 +475,36 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5730457778958296672
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828664446087196326}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300002, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
+--- !u!54 &6956366619170650804
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828664446087196326}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1828664446087196328
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,6 +516,8 @@ GameObject:
   - component: {fileID: 1828664446087492232}
   - component: {fileID: 1828664446086165160}
   - component: {fileID: 1828664446085197928}
+  - component: {fileID: 1575186863886716831}
+  - component: {fileID: 2270291369213151467}
   m_Layer: 0
   m_Name: Quadro3_cell.006
   m_TagString: Untagged
@@ -400,8 +564,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100002, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
-  - {fileID: 2100000, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
+  - {fileID: 2100000, guid: 821f90b7e99ffa14d9ccf1c9e34f9a97, type: 2}
+  - {fileID: 2100000, guid: 821f90b7e99ffa14d9ccf1c9e34f9a97, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -421,6 +585,36 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1575186863886716831
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828664446087196328}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300012, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
+--- !u!54 &2270291369213151467
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828664446087196328}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1828664446087196330
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,6 +626,8 @@ GameObject:
   - component: {fileID: 1828664446087492234}
   - component: {fileID: 1828664446086165162}
   - component: {fileID: 1828664446085197930}
+  - component: {fileID: 6579629981531927481}
+  - component: {fileID: 1883939516623982783}
   m_Layer: 0
   m_Name: Quadro3_cell.007
   m_TagString: Untagged
@@ -478,8 +674,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
-  - {fileID: 2100002, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
+  - {fileID: 2100000, guid: 821f90b7e99ffa14d9ccf1c9e34f9a97, type: 2}
+  - {fileID: 2100000, guid: 821f90b7e99ffa14d9ccf1c9e34f9a97, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -499,6 +695,36 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6579629981531927481
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828664446087196330}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300014, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
+--- !u!54 &1883939516623982783
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828664446087196330}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1828664446087196332
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,6 +736,8 @@ GameObject:
   - component: {fileID: 1828664446087492236}
   - component: {fileID: 1828664446086165164}
   - component: {fileID: 1828664446085197932}
+  - component: {fileID: 7196841776477162667}
+  - component: {fileID: 5020941287666419652}
   m_Layer: 0
   m_Name: Quadro3_cell.004
   m_TagString: Untagged
@@ -556,8 +784,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
-  - {fileID: 2100002, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
+  - {fileID: 2100000, guid: 821f90b7e99ffa14d9ccf1c9e34f9a97, type: 2}
+  - {fileID: 2100000, guid: 821f90b7e99ffa14d9ccf1c9e34f9a97, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -577,6 +805,36 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7196841776477162667
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828664446087196332}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300008, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
+--- !u!54 &5020941287666419652
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828664446087196332}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1828664446087196334
 GameObject:
   m_ObjectHideFlags: 0
@@ -588,6 +846,8 @@ GameObject:
   - component: {fileID: 1828664446087492238}
   - component: {fileID: 1828664446086165166}
   - component: {fileID: 1828664446085197934}
+  - component: {fileID: 4940296457138121759}
+  - component: {fileID: 8810401096762502703}
   m_Layer: 0
   m_Name: Quadro3_cell.005
   m_TagString: Untagged
@@ -634,8 +894,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100002, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
-  - {fileID: 2100000, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
+  - {fileID: 2100000, guid: 821f90b7e99ffa14d9ccf1c9e34f9a97, type: 2}
+  - {fileID: 2100000, guid: 821f90b7e99ffa14d9ccf1c9e34f9a97, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -655,6 +915,36 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4940296457138121759
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828664446087196334}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300010, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
+--- !u!54 &8810401096762502703
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828664446087196334}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1828664446087196336
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,6 +956,8 @@ GameObject:
   - component: {fileID: 1828664446087492240}
   - component: {fileID: 1828664446086165168}
   - component: {fileID: 1828664446085197936}
+  - component: {fileID: 4496284840130360312}
+  - component: {fileID: 8906985953184307114}
   m_Layer: 0
   m_Name: Quadro3_cell.010
   m_TagString: Untagged
@@ -712,8 +1004,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
-  - {fileID: 2100002, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
+  - {fileID: 2100000, guid: 821f90b7e99ffa14d9ccf1c9e34f9a97, type: 2}
+  - {fileID: 2100000, guid: 821f90b7e99ffa14d9ccf1c9e34f9a97, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -733,6 +1025,36 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4496284840130360312
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828664446087196336}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300020, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
+--- !u!54 &8906985953184307114
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828664446087196336}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1828664446087196338
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,6 +1066,8 @@ GameObject:
   - component: {fileID: 1828664446087492242}
   - component: {fileID: 1828664446086165170}
   - component: {fileID: 1828664446085197938}
+  - component: {fileID: 8933240355408542892}
+  - component: {fileID: 3895899582424147221}
   m_Layer: 0
   m_Name: Quadro3_cell.011
   m_TagString: Untagged
@@ -790,8 +1114,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
-  - {fileID: 2100002, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
+  - {fileID: 2100000, guid: 821f90b7e99ffa14d9ccf1c9e34f9a97, type: 2}
+  - {fileID: 2100000, guid: 821f90b7e99ffa14d9ccf1c9e34f9a97, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -811,6 +1135,36 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8933240355408542892
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828664446087196338}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300022, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
+--- !u!54 &3895899582424147221
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828664446087196338}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1828664446087196340
 GameObject:
   m_ObjectHideFlags: 0
@@ -822,6 +1176,8 @@ GameObject:
   - component: {fileID: 1828664446087492244}
   - component: {fileID: 1828664446086165172}
   - component: {fileID: 1828664446085197940}
+  - component: {fileID: 7967100962525337319}
+  - component: {fileID: 5777528299586043678}
   m_Layer: 0
   m_Name: Quadro3_cell.008
   m_TagString: Untagged
@@ -868,8 +1224,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
-  - {fileID: 2100002, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
+  - {fileID: 2100000, guid: 821f90b7e99ffa14d9ccf1c9e34f9a97, type: 2}
+  - {fileID: 2100000, guid: 821f90b7e99ffa14d9ccf1c9e34f9a97, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -889,6 +1245,36 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &7967100962525337319
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828664446087196340}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300016, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
+--- !u!54 &5777528299586043678
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828664446087196340}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1828664446087196342
 GameObject:
   m_ObjectHideFlags: 0
@@ -900,6 +1286,8 @@ GameObject:
   - component: {fileID: 1828664446087492246}
   - component: {fileID: 1828664446086165174}
   - component: {fileID: 1828664446085197942}
+  - component: {fileID: 1099610797870290395}
+  - component: {fileID: 776954531961508233}
   m_Layer: 0
   m_Name: Quadro3_cell.009
   m_TagString: Untagged
@@ -946,8 +1334,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
-  - {fileID: 2100002, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
+  - {fileID: 2100000, guid: 821f90b7e99ffa14d9ccf1c9e34f9a97, type: 2}
+  - {fileID: 2100000, guid: 821f90b7e99ffa14d9ccf1c9e34f9a97, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -967,6 +1355,36 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1099610797870290395
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828664446087196342}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300018, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
+--- !u!54 &776954531961508233
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828664446087196342}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1828664446087196344
 GameObject:
   m_ObjectHideFlags: 0
@@ -978,6 +1396,8 @@ GameObject:
   - component: {fileID: 1828664446087492248}
   - component: {fileID: 1828664446086165176}
   - component: {fileID: 1828664446085197944}
+  - component: {fileID: 1047091255034876560}
+  - component: {fileID: 8352191771755207077}
   m_Layer: 0
   m_Name: Quadro3_cell.014
   m_TagString: Untagged
@@ -1024,8 +1444,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
-  - {fileID: 2100002, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
+  - {fileID: 2100000, guid: 821f90b7e99ffa14d9ccf1c9e34f9a97, type: 2}
+  - {fileID: 2100000, guid: 821f90b7e99ffa14d9ccf1c9e34f9a97, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1045,6 +1465,36 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &1047091255034876560
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828664446087196344}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300028, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
+--- !u!54 &8352191771755207077
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828664446087196344}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1828664446087196346
 GameObject:
   m_ObjectHideFlags: 0
@@ -1056,6 +1506,8 @@ GameObject:
   - component: {fileID: 1828664446087492250}
   - component: {fileID: 1828664446086165178}
   - component: {fileID: 1828664446085197946}
+  - component: {fileID: 6061821326269846012}
+  - component: {fileID: 3890639203246387286}
   m_Layer: 0
   m_Name: Quadro3_cell.015
   m_TagString: Untagged
@@ -1102,8 +1554,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
-  - {fileID: 2100002, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
+  - {fileID: 2100000, guid: 821f90b7e99ffa14d9ccf1c9e34f9a97, type: 2}
+  - {fileID: 2100000, guid: 821f90b7e99ffa14d9ccf1c9e34f9a97, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1123,6 +1575,36 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6061821326269846012
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828664446087196346}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300030, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
+--- !u!54 &3890639203246387286
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828664446087196346}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1828664446087196348
 GameObject:
   m_ObjectHideFlags: 0
@@ -1134,6 +1616,8 @@ GameObject:
   - component: {fileID: 1828664446087492252}
   - component: {fileID: 1828664446086165180}
   - component: {fileID: 1828664446085197948}
+  - component: {fileID: 6034528641478419503}
+  - component: {fileID: 5044047500722101655}
   m_Layer: 0
   m_Name: Quadro3_cell.012
   m_TagString: Untagged
@@ -1180,8 +1664,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
-  - {fileID: 2100002, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
+  - {fileID: 2100000, guid: 821f90b7e99ffa14d9ccf1c9e34f9a97, type: 2}
+  - {fileID: 2100000, guid: 821f90b7e99ffa14d9ccf1c9e34f9a97, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1201,6 +1685,36 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6034528641478419503
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828664446087196348}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300024, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
+--- !u!54 &5044047500722101655
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828664446087196348}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1828664446087196350
 GameObject:
   m_ObjectHideFlags: 0
@@ -1212,6 +1726,8 @@ GameObject:
   - component: {fileID: 1828664446087492254}
   - component: {fileID: 1828664446086165182}
   - component: {fileID: 1828664446085197950}
+  - component: {fileID: 864948668284554507}
+  - component: {fileID: 591051800780298533}
   m_Layer: 0
   m_Name: Quadro3_cell.013
   m_TagString: Untagged
@@ -1258,8 +1774,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
-  - {fileID: 2100002, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
+  - {fileID: 2100000, guid: 821f90b7e99ffa14d9ccf1c9e34f9a97, type: 2}
+  - {fileID: 2100000, guid: 821f90b7e99ffa14d9ccf1c9e34f9a97, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1279,6 +1795,36 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &864948668284554507
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828664446087196350}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300026, guid: 0cdbfc0f542ff21488e1105b0a0c2482, type: 3}
+--- !u!54 &591051800780298533
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828664446087196350}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8588549814552549967
 GameObject:
   m_ObjectHideFlags: 0
@@ -1302,9 +1848,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8588549814552549967}
-  m_LocalRotation: {x: -0, y: 0, z: -0, w: 1}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.70710677}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children:
   - {fileID: 1828664446087492228}
   - {fileID: 1828664446087492230}
@@ -1324,4 +1870,4 @@ Transform:
   - {fileID: 1828664446087492250}
   m_Father: {fileID: 298939524334072303}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90.00001, y: 0, z: 0}

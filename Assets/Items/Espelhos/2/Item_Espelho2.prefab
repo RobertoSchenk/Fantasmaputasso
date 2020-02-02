@@ -82,6 +82,7 @@ MonoBehaviour:
   possessCollider: {fileID: 6972082134520685873}
   brokenVersion: {fileID: 8407409872457148391, guid: 819eeb38b05bab94ab34c5dd99634c41,
     type: 3}
+  canBreak: 0
 --- !u!65 &8713771247065116809
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -168,7 +169,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100002, guid: 9b7eed87b74ca834a96ba731591a65cc, type: 3}
+  - {fileID: 2100000, guid: 9bfc5934289cb1f4c985913600728539, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

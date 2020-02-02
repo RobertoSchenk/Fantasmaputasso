@@ -5,7 +5,7 @@ using UnityEngine;
 public class ItemMovementComponent : MovementComponent
 {
     Rigidbody rb;
-    public float speed;
+    public float speed = 700;
     void Start()
     {
         rb = GetComponent<Rigidbody>();

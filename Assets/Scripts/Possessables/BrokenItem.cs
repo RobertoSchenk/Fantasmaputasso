@@ -19,11 +19,10 @@ public class BrokenItem : MonoBehaviour
     public List<GameObject> internalObjects;
     public List<FTransform> startingPositions;
     public List<FTransform> endedPositions;
-    public float force = 25;
+    public float force = 250;
     public float dist = 1;
-    public float mod = 1.1f;
+    public float mod = 0.1f;
     public float rewindSpeed = 1;
-    public float unrewindableDelay = 3;
     bool disabled = false;
     bool rewinding;
     float _currentRewind;
@@ -50,7 +49,7 @@ public class BrokenItem : MonoBehaviour
 
     void StartRewind()
     {
-        if(!disabled && !IsUnrewindable())
+        if(!disabled)
         {
             disabled = true;
             _currentRewind = 0;
@@ -79,21 +78,11 @@ public class BrokenItem : MonoBehaviour
         }
     }
 
-    bool IsUnrewindable()
-    {
-        return _currentUnRewindable > unrewindableDelay;
-    }
-
     void Update()
     {
         if(!rewinded && !isPlayerInteracting)
         {
             _currentUnRewindable += Time.deltaTime;
-        }
-
-        if(IsUnrewindable())
-        {
-            rewinding = false;
         }
 
         if(!rewinding && isPlayerInteracting)

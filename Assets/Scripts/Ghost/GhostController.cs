@@ -47,7 +47,7 @@ public class GhostController : MonoBehaviour
 
     GameObject[] FindWaypoints()
     {
-        return waypoints;
+        return GameObject.FindGameObjectsWithTag("Waypoint");
     }
 
     void Possess(GameObject otherObj)

@@ -35,6 +35,7 @@ public class BreakableItem : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
+        print("TEST");
         if(other.gameObject.tag == "Floor")
         {
             Break();

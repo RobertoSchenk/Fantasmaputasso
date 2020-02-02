@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
 
         //moveComponent.MovementInput = new Vector3(0,0,0);
 
-        moveComponent.MovementInput = new Vector3(x, 0f, z);
+        moveComponent.MovementInput = new Vector3(-z, 0f, x);
         //if(Input.GetKey(KeyCode.W))
         //{
         //    moveComponent.MovementInput = new Vector3(0,1,0);

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public int distance;
+    public Vector3 XZOffset;
     public GameObject target;
     Vector3 targetpos;
     public float minDist, speed;
@@ -14,14 +14,15 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         offsetY =  transform.position.y - target.transform.position.y;
-        targetpos = target.transform.position + new Vector3(0, offsetY, -distance);
+        XZOffset = new Vector3(transform.position.x - target.transform.position.x, 0, transform.position.z - target.transform.position.z);
+        targetpos = target.transform.position + new Vector3(0, offsetY, 0) + XZOffset;
         transform.position = targetpos;
     }
 
     // Update is called once per frame
     void Update()
     {
-        targetpos = target.transform.position + new Vector3(0, offsetY, -distance);
+        targetpos = target.transform.position + new Vector3(0, offsetY, 0) + XZOffset;
 
         if(Mathf.Abs(targetpos.x - transform.position.x) >= minDist)
         {

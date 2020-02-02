@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public MovementComponent moveComponent;
+
     void Start()
     {
         moveComponent = GetComponent<MovementComponent>();

@@ -19,6 +19,11 @@ public class ItemMovementComponent : MovementComponent
 
     void Update()
     {
-        rb.AddForce(ConsumeMovementInput() * speed * Time.deltaTime, ForceMode.Force);
+        var input = ConsumeMovementInput();
+        rb.AddForce(input * speed * Time.deltaTime, ForceMode.Force);
+        if(input.magnitude > 0.1f && rb.isKinematic)
+        {
+            rb.isKinematic = false;
+        }
     }
 }

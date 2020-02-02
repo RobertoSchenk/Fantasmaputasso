@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public class GameUI : MonoBehaviour
 {
     public GameObject ScoreText;
+    public GameObject GameScreen;
     public GameObject FinalScreen;
 
     Vector2 offset;
@@ -26,7 +27,6 @@ public class GameUI : MonoBehaviour
     }
     public void ShowPoints(int points, Vector3 worldPos)
     {
-        
         var pointsShow = Instantiate(ScoreText, canvasRect);
         pointsShow.GetComponent<PointShower>().Initialize(points, WorldToCanvasPosition(canvasRect, Camera.main, worldPos));
     }
@@ -38,6 +38,7 @@ public class GameUI : MonoBehaviour
 
     public void ShowEndScreen()
     {
+        GameScreen.SetActive(false);
         FinalScoreText.text = GameEvents.CurrentPoints.ToString();
         FinalScreen.SetActive(true);
     }

@@ -86,6 +86,11 @@ public class BrokenItem : MonoBehaviour
 
     void Update()
     {
+        if(!GameEvents.gameRunning)
+        {
+            return;
+        }
+
         if(!rewinded && !isPlayerInteracting)
         {
             _currentUnRewindable += Time.deltaTime;

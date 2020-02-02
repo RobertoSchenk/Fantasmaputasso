@@ -115,6 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 694053472850354402, guid: 5670aeaac72ebf9498cebf9e87d78831,
     type: 3}
+  GameScreen: {fileID: 7440954285964804328}
   FinalScreen: {fileID: 383158022479286313}
   canvasRect: {fileID: 7773482834780587696}
   FinalScoreText: {fileID: 1906327456066095911}

@@ -22,7 +22,7 @@ public class GameEvents : MonoBehaviour
 
     public static int CurrentPoints =0;
 
-    public float EndGameTimer;
+    public float EndGameTimer = 6;
     
     public static bool gameRunning;
 
@@ -111,17 +111,12 @@ public class GameEvents : MonoBehaviour
         }
 
         CurrentPoints += points;
-        items--;
         
         if(current.onPointsChanged != null)
         {
             current.onPointsChanged.Invoke(CurrentPoints);
         }
 
-        if(items <= 0)
-        {
-            EndGame();
-        }
         
     }
 
@@ -141,6 +136,16 @@ public class GameEvents : MonoBehaviour
     public static void RegisterItem()
     {
         items++;
+    }
+
+    public static void ItemBroken()
+    {
+        items--;
+
+        if(items <=0 )
+        {
+            EndGame();
+        }
     }
 
 

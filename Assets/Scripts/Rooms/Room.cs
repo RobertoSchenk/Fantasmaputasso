@@ -2,36 +2,40 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public struct WallStruct
+{
+    public bool isDoor;
+    public GameObject parentObj;
+}
+
 public class Room : MonoBehaviour
 {
     public int roomId;
     public Renderer InvisWall;
+
+    public WallStruct wallS;
+    public WallStruct wallW;
+    public WallStruct wallE;
+    public WallStruct wallN;
+
     public GameObject player;
     public GameObject camera;
     void Start()
     {
        InvisWall.enabled = false;
-
-       player = GameObject.FindGameObjectWithTag("Player");
-       camera = Camera.main.gameObject;
+        UpdateWallStatus(wallS);
+       UpdateWallStatus(wallE);
+       UpdateWallStatus(wallW);
+       UpdateWallStatus(wallN);
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    void UpdateWallStatus(WallStruct wallStruct)
     {
-        Vector3 vector= (player.transform.position - camera.transform.position);
-        float dist = vector.magnitude;
-        RaycastHit outHit;
-        if(Physics.Raycast(camera.transform.position, vector.normalized, out outHit, dist))
+        if(wallStruct.parentObj != null)
         {
-            if(outHit.collider.gameObject == InvisWall)
-            {
-                InvisWall.enabled = false;
-            }
-        }
-        else
-        {
-                InvisWall.enabled = false;
+            Destroy(wallStruct.parentObj.transform.GetChild(wallStruct.isDoor ? 0 : 1).gameObject);
         }
     }
+   
 }

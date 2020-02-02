@@ -12,6 +12,8 @@ public class DoorController : MonoBehaviour
     {
         GameEvents.current.onDoorwayTriggerEnter += OnDoorwayOpen;
         GameEvents.current.onDoorwayTriggerExit += OnDoorwayClose;
+        id = Random.Range(0, 10000);
+        GetComponentInChildren<TriggerArea>().id = id;
     }
 
     private void OnDoorwayClose(int id)

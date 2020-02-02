@@ -33,6 +33,7 @@ public class BreakableItem : MonoBehaviour
         onBreak.Invoke();
 
         var go = GameObject.Instantiate(brokenVersion, transform.position, Quaternion.identity);
+        go.transform.localScale = transform.localScale;
         go.transform.rotation = transform.rotation;
         Destroy(gameObject);
     }

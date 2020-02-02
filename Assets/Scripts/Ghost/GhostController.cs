@@ -52,6 +52,8 @@ public class GhostController : MonoBehaviour
 
     void Possess(GameObject otherObj)
     {
+        //SoundManager.PlayGhostSound();
+
         targetObject = otherObj;
         possessedItem = otherObj.GetComponent<BreakableItem>();
         moveComponent = otherObj.GetComponent<MovementComponent>();
@@ -68,6 +70,8 @@ public class GhostController : MonoBehaviour
 
     void UnPossess()
     {
+
+
         possessedItem.onBreak.RemoveListener(UnPossess);
         ghostObject.transform.position = possessedItem.transform.position;
         possessedItem = null;

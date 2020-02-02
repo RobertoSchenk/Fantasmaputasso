@@ -7,6 +7,7 @@ public class SoundManager : MonoBehaviour
     // Start is called before the first frame update
     public static SoundManager current;
     public AudioSource sound;
+    public AudioSource Chucklesound;
     public AudioClip ghostSound;
     public AudioClip breakingSound;
     public AudioClip catMeow;
@@ -26,6 +27,7 @@ public class SoundManager : MonoBehaviour
     public static void PlayBreakingSound()
     {
         current.sound.PlayOneShot(current.breakingSound);
+        current.Chucklesound.PlayDelayed(1f);
     }
 
     public static void PlayMeow()
@@ -35,7 +37,7 @@ public class SoundManager : MonoBehaviour
 
     public static void PlayChuckle()
     {
-        current.sound.PlayOneShot(current.ghostChuckle);
+        current.Chucklesound.PlayDelayed(2f);
     }
 
     public static void PlayBell()

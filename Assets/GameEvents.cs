@@ -21,12 +21,36 @@ public class GameEvents : MonoBehaviour
     public static GameEvents current;
 
     public static int CurrentPoints =0;
+
+    public float EndGameTimer = 6;
+    
+    public static bool gameRunning;
+
+    public UnityEvent onGameFinished;
     
     private void Awake()
     {
         current = this;
+       
     }
 
+    void Start()
+    {
+        gameRunning = false;
+        CurrentPoints = 0;
+        StartGame();
+    }
+
+    public static void StartGame()
+    {
+        gameRunning = true;
+    }
+
+
+    public static void EndGame()
+    {
+        current.StartCoroutine(current.WaitEndGame(current.EndGameTimer));
+    }
 
     public event Action<int> onDoorwayTriggerEnter;
     public void DoorwayTriggerEnter(int id)
@@ -92,6 +116,37 @@ public class GameEvents : MonoBehaviour
         {
             current.onPointsChanged.Invoke(CurrentPoints);
         }
+
         
     }
+
+    IEnumerator WaitEndGame(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+
+
+        gameRunning = false;
+        if(onGameFinished != null)
+        {
+            onGameFinished.Invoke();
+        }
+    }
+
+    static int items = 0;
+    public static void RegisterItem()
+    {
+        items++;
+    }
+
+    public static void ItemBroken()
+    {
+        items--;
+
+        if(items <=0 )
+        {
+            EndGame();
+        }
+    }
+
+
 }

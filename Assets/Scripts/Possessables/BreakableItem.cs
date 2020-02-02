@@ -16,6 +16,8 @@ public class BreakableItem : MonoBehaviour
         startingForward = transform.forward;
         gameObject.tag="PossessItem";
         gameObject.layer = LayerMask.NameToLayer("Item");
+
+        GameEvents.RegisterItem();
     }
     
     public void Break()
@@ -25,7 +27,7 @@ public class BreakableItem : MonoBehaviour
         gameObject.tag = "Untagged";
         gameObject.layer = LayerMask.NameToLayer("BrokenItem");
         possessCollider.enabled = false;
-
+        GameEvents.ItemBroken();
 
         if(onBreak == null)
         {

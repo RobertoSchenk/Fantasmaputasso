@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [System.Serializable]
 public struct FTransform
@@ -14,6 +15,7 @@ public struct FTransform
     }
 }
 
+[RequireComponent(typeof(SphereCollider))]
 public class BrokenItem : MonoBehaviour
 {
     public List<GameObject> internalObjects;
@@ -31,6 +33,7 @@ public class BrokenItem : MonoBehaviour
 
     bool isPlayerInteracting;
 
+    GameObject feedbackGo;
 
     void Start()
     {
@@ -44,7 +47,10 @@ public class BrokenItem : MonoBehaviour
             internalObjects.Add(transform.gameObject);
             startingPositions.Add(new FTransform(transform));
             rb.AddExplosionForce(force, transform.position, dist, mod);
+            transform.gameObject.layer = LayerMask.NameToLayer("ItemNoCol");
         }
+
+        feedbackGo = Instantiate(BrokenItemFeedback.staticfeedbackparticle, transform);
     }
 
     void StartRewind()
@@ -105,7 +111,9 @@ public class BrokenItem : MonoBehaviour
         else if(rewinding)
         {
             rewinding = false;
-            rewinded = true;  
+            rewinded = true;
+
+            Destroy(feedbackGo);
         }
     }
 

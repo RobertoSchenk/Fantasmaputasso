@@ -18,6 +18,7 @@ public class GhostController : MonoBehaviour
     public float waitingTime = 3;
     float _currentWait = 0;
 
+    public bool combo = true;
     void Start()
     {
         ghostObject = gameObject;
@@ -73,7 +74,7 @@ public class GhostController : MonoBehaviour
         possessedItem = null;
         targetObject = null;
         moveComponent = ghostObject.GetComponent<MovementComponent>();
-        canPickupNewTarget = false;
+        canPickupNewTarget = combo;
 
         EnableCollisionAndRender(true);
     }

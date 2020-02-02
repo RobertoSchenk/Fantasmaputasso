@@ -23,7 +23,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1368428010329857499}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -52,6 +52,11 @@ PrefabInstance:
     - target: {fileID: 102274928879373569, guid: 37d6df03838392c4ba4d120be38935d8,
         type: 3}
       propertyPath: onItemRepaired.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 102274928879373569, guid: 37d6df03838392c4ba4d120be38935d8,
+        type: 3}
+      propertyPath: onGameFinished.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 102274928879373569, guid: 37d6df03838392c4ba4d120be38935d8,
@@ -103,6 +108,31 @@ PrefabInstance:
         type: 3}
       propertyPath: onItemRepaired.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 102274928879373569, guid: 37d6df03838392c4ba4d120be38935d8,
+        type: 3}
+      propertyPath: onGameFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3330186861222635327}
+    - target: {fileID: 102274928879373569, guid: 37d6df03838392c4ba4d120be38935d8,
+        type: 3}
+      propertyPath: onGameFinished.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShowEndScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 102274928879373569, guid: 37d6df03838392c4ba4d120be38935d8,
+        type: 3}
+      propertyPath: onGameFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 102274928879373569, guid: 37d6df03838392c4ba4d120be38935d8,
+        type: 3}
+      propertyPath: onGameFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 102274928879373569, guid: 37d6df03838392c4ba4d120be38935d8,
+        type: 3}
+      propertyPath: onGameFinished.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 102274928879373598, guid: 37d6df03838392c4ba4d120be38935d8,
         type: 3}

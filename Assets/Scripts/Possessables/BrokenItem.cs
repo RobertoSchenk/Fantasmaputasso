@@ -14,6 +14,7 @@ public struct FTransform
     }
 }
 
+[RequireComponent(typeof(SphereCollider))]
 public class BrokenItem : MonoBehaviour
 {
     public List<GameObject> internalObjects;
@@ -44,6 +45,7 @@ public class BrokenItem : MonoBehaviour
             internalObjects.Add(transform.gameObject);
             startingPositions.Add(new FTransform(transform));
             rb.AddExplosionForce(force, transform.position, dist, mod);
+            transform.gameObject.layer = LayerMask.NameToLayer("ItemNoCol");
         }
     }
 

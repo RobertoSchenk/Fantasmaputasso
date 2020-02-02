@@ -6,5 +6,4 @@ using UnityEngine.Audio;
 public class Waypoint : MonoBehaviour
 {
     int roomId;
-
 }

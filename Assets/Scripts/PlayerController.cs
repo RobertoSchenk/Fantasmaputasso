@@ -12,7 +12,10 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-
+        if(!GameEvents.gameRunning)
+        {
+            return;
+        }
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 

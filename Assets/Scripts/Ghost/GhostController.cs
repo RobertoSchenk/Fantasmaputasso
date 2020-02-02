@@ -115,6 +115,10 @@ public class GhostController : MonoBehaviour
 
     void Update()
     {
+        if(!GameEvents.gameRunning)
+        {
+            return;
+        }
         if(_currentWait > 0)
         {
             _currentWait = Mathf.Clamp(_currentWait - Time.deltaTime, 0.0f, 99999.0f);

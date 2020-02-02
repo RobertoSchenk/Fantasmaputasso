@@ -50,7 +50,7 @@ public class BrokenItem : MonoBehaviour
             transform.gameObject.layer = LayerMask.NameToLayer("ItemNoCol");
         }
 
-        feedbackGo = Instantiate(BrokenItemFeedback.staticfeedbackparticle, transform);
+        feedbackGo = Instantiate(BrokenItemFeedback.staticfeedbackparticle, transform.position, Quaternion.identity);
     }
 
     void StartRewind()

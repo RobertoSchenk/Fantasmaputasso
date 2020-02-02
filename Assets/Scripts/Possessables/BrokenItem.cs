@@ -112,7 +112,7 @@ public class BrokenItem : MonoBehaviour
         {
             rewinding = false;
             rewinded = true;
-
+            GameEvents.ItemRepaired(GameEvents.GetPointsPerTime(_currentUnRewindable), gameObject.transform.position);
             Destroy(feedbackGo);
         }
     }

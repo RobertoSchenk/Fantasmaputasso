@@ -6,7 +6,7 @@ public class GhostController : MonoBehaviour
 {
     GameObject ghostObject;
     MovementComponent moveComponent;
-    new Renderer renderer;
+    new public GameObject renderer;
     Collider col;
     GameObject targetObject;
     BreakableItem possessedItem;
@@ -24,7 +24,6 @@ public class GhostController : MonoBehaviour
         ghostObject = gameObject;
         moveComponent = ghostObject.GetComponent<MovementComponent>();
         col = ghostObject.GetComponent<Collider>();
-        renderer = ghostObject.GetComponent<Renderer>();
     }
 
     void AssignNewTarget()
@@ -64,7 +63,7 @@ public class GhostController : MonoBehaviour
     void EnableCollisionAndRender(bool enabled)
     {
         col.enabled = enabled;
-        renderer.enabled = enabled;
+        renderer.SetActive(enabled);
     }
 
     void UnPossess()

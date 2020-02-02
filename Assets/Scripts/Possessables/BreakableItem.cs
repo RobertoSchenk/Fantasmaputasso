@@ -22,7 +22,6 @@ public class BreakableItem : MonoBehaviour
     
     public void Break()
     {
-        SoundManager.PlayBreakingSound();
 
         gameObject.tag = "Untagged";
         gameObject.layer = LayerMask.NameToLayer("BrokenItem");
@@ -40,6 +39,8 @@ public class BreakableItem : MonoBehaviour
         go.transform.localScale = transform.localScale;
         go.transform.rotation = transform.rotation;
         Destroy(gameObject);
+
+        SoundManager.PlayBreakingSound();
     }
 
     private void OnCollisionEnter(Collision other)

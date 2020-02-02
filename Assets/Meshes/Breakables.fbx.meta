@@ -43,7 +43,22 @@ ModelImporter:
     4300008: Pote3.001
     4300010: Pote4.001
     4300012: Abajur2.001
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Abajur
+    second: {fileID: 2100000, guid: 24a8a5f687a5ef949bdb3374b2805626, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vaso
+    second: {fileID: 2100000, guid: ad179f16693d1c54a8fc7bedaf8b55a9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vidros
+    second: {fileID: 2100000, guid: d016bd97640da8b4794eb78fc2d13227, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

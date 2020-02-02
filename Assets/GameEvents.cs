@@ -12,10 +12,6 @@ public class GameEvents : MonoBehaviour
         current = this;
     }
 
-    public static void PlaySoundX()
-    {
-        
-    }
 
     public event Action<int> onDoorwayTriggerEnter;
     public void DoorwayTriggerEnter(int id)

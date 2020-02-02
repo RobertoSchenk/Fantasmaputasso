@@ -8,7 +8,7 @@ public class BrokenItemFeedback : MonoBehaviour
 
     public GameObject feedbackparticle;
 
-    void Start()
+    void Awake()
     {
         staticfeedbackparticle = feedbackparticle;
     }

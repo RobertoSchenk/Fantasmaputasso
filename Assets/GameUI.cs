@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 
 
 
@@ -63,5 +63,10 @@ public class GameUI : MonoBehaviour
  
          return temp;
      }
+
+    public void ChangeScene(int id)
+    {
+        SceneManager.LoadScene(id);
+    }
 
 }
